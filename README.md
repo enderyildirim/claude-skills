@@ -12,6 +12,7 @@ Reusable [Claude Code](https://claude.ai/code) skills and agents that work acros
 | **sidetrack** | `/sidetrack [deep] <issue>` | Evaluate a side issue found during development. Assess coupling, compare fixes, decide: fix now or defer? |
 | **commit-push-pr** | `/commit-push-pr [desc]` | Commit, push, and create a PR in one step. Reads project conventions from CLAUDE.md. |
 | **learn** | `/learn [topic]` | Capture lessons from the current conversation and add them to the project's CLAUDE.md. |
+| **tidy-permissions** | `/tidy-permissions` | Clean up settings.json permissions — consolidate similar rules with wildcards, remove duplicates, sort alphabetically. |
 
 ## Agents
 
@@ -34,6 +35,7 @@ ln -s ~/dev/tools/claude-skills/skills/research research
 ln -s ~/dev/tools/claude-skills/skills/sidetrack sidetrack
 ln -s ~/dev/tools/claude-skills/skills/commit-push-pr commit-push-pr
 ln -s ~/dev/tools/claude-skills/skills/learn learn
+ln -s ~/dev/tools/claude-skills/skills/tidy-permissions tidy-permissions
 
 # Symlink agents
 cd ~/.claude/agents
