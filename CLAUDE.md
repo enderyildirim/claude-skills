@@ -67,7 +67,7 @@ What this skill does in one paragraph.
 name: agent-name
 description: "When to invoke this agent — include trigger phrases users might say"
 user-invocable: true
-model: sonnet
+model: opus
 effort: high
 maxTurns: 25
 disallowedTools: [tools agent should NOT use]
