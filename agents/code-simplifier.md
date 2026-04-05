@@ -2,7 +2,7 @@
 name: code-simplifier
 description: "Clean up and simplify code after implementation. Removes unnecessary complexity, dead code, verbose patterns, and over-engineering. Invoke after finishing a feature or fix, or when code feels bloated."
 user-invocable: true
-model: sonnet
+model: opus
 effort: high
 maxTurns: 30
 memory: false

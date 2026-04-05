@@ -2,7 +2,7 @@
 name: issue-creator
 description: "Investigate a problem in the codebase, create a detailed GitHub issue with root cause analysis. Invoke when the user reports a bug, wants to track an improvement, or says 'create an issue for this'. Usage: /issue-creator <description>"
 user-invocable: true
-model: sonnet
+model: opus
 effort: high
 maxTurns: 25
 disallowedTools: Edit Write NotebookEdit
