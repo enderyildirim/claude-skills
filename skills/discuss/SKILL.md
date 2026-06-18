@@ -1,10 +1,10 @@
 ---
-name: hold
+name: discuss
 description: Pause implementation — switch to discussion-only mode for analysis, brainstorming, and design exploration. No code changes until explicitly told to proceed.
 user-invocable: true
 ---
 
-# Hold — Discussion Mode
+# Discuss — Discussion Mode
 
 ## What This Does
 

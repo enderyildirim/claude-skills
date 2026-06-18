@@ -1,0 +1,20 @@
+{
+  "name": "flow",
+  "description": "Workflow meta-tools for Claude Code that work across any project: discussion mode, research, sidetracks, worktree isolation, commit/push/PR, lesson capture, permission tidying, and code-cleanup agents.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ender Yildirim",
+    "url": "https://github.com/enderyildirim"
+  },
+  "homepage": "https://github.com/enderyildirim/claude-skills",
+  "repository": "https://github.com/enderyildirim/claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "workflow",
+    "productivity",
+    "git-worktree",
+    "research",
+    "code-review",
+    "meta-tools"
+  ]
+}

@@ -1,22 +1,29 @@
 # Claude Skills & Agents
 
-Reusable Claude Code skills and agents — workflow meta-tools that work across any project.
+Reusable Claude Code skills and agents — workflow meta-tools that work across any project. Packaged as a Claude Code **plugin** named `flow`, distributed via this repo's own marketplace.
 
 ## Repo Structure
 
 ```
+.claude-plugin/
+  plugin.json     # Plugin manifest (name: flow)
+  marketplace.json # Marketplace manifest (name: claude-skills) — lists the flow plugin, source "."
 skills/           # Inline workflow tools (run in main conversation context)
-  hold/           # Pause implementation, discussion-only mode
+  discuss/        # Pause implementation, discussion-only mode
   mediocre/       # Scrap mediocre fix, redo it right
   research/       # Research implementation approaches, produce report
   sidetrack/      # Evaluate side issues: fix now or defer?
+  worktree/       # Isolate parallel tasks in separate git worktrees
   commit-push-pr/ # Commit, push, PR in one step
+  decide/         # Guided decision flow via AskUserQuestion UI
   learn/          # Capture conversation lessons into CLAUDE.md
   tidy-permissions/ # Clean up settings.json permission rules
 agents/           # Isolated AI workers (own context window)
   issue-creator.md    # Investigate & create GitHub issues
   code-simplifier.md  # Clean up code after implementation
 ```
+
+The repo root **is** the `flow` plugin (marked by `.claude-plugin/plugin.json`), and it also serves itself as a single-plugin marketplace (`.claude-plugin/marketplace.json`, plugin `source: "."`). Once installed, skills resolve as `/flow:<name>`.
 
 ## Conventions
 
@@ -31,7 +38,16 @@ agents/           # Isolated AI workers (own context window)
 
 ## How Users Install
 
-Users clone this repo and symlink individual skills/agents into `~/.claude/skills/` and `~/.claude/agents/`. Project-level skills/agents (in `.claude/skills/`) override user-level ones with the same name.
+Users add the marketplace and install the plugin from any Claude Code session (one time per machine):
+
+```
+/plugin marketplace add enderyildirim/claude-skills
+/plugin install flow@claude-skills
+```
+
+Updates: `/plugin marketplace update claude-skills` then `/plugin update flow@claude-skills` (or the `claude plugin ...` terminal equivalents). Adding a skill/agent here and pushing means every machine picks it up on the next update.
+
+Project-level skills/agents (in a repo's `.claude/`) override plugin ones with the same name. The older symlink-into-`~/.claude/skills/` method is deprecated — see README "Migrating from symlinks" for cleanup.
 
 ## Adding New Skills or Agents
 

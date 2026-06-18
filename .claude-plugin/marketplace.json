@@ -1,0 +1,28 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-skills",
+  "description": "Ender's reusable Claude Code workflow tools — project-agnostic skills and agents.",
+  "owner": {
+    "name": "Ender Yildirim",
+    "url": "https://github.com/enderyildirim"
+  },
+  "plugins": [
+    {
+      "name": "flow",
+      "source": ".",
+      "description": "Workflow meta-tools: discuss (discussion mode), research, sidetrack, worktree isolation, mediocre redo, commit-push-pr, learn, tidy-permissions, plus issue-creator and code-simplifier agents.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ender Yildirim"
+      },
+      "category": "workflow",
+      "keywords": [
+        "workflow",
+        "productivity",
+        "git-worktree",
+        "research",
+        "meta-tools"
+      ]
+    }
+  ]
+}
